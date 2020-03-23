@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="1017.0" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controller">
+   <center>
+      <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 5;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="user_id" prefWidth="51.0" text="ID" />
+          <TableColumn fx:id="username" prefWidth="181.0" text="USERNAME" />
+            <TableColumn fx:id="password" prefWidth="181.0" text="PASSWORD" />
+        </columns>
+      </TableView>
+   </center>
+   <left>
+      <VBox prefHeight="567.0" prefWidth="603.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-width: 5; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="addUserUsername" alignment="CENTER" promptText="username" />
+                  <PasswordField fx:id="addUserPassword" alignment="CENTER" promptText="password" />
+                  <Button mnemonicParsing="false" onAction="#addUser" text="ДОБАВИТЬ ПОЛЬЗОВАТЕЛЯ" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-width: 5; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="deleteUserUsername" alignment="CENTER" promptText="username" />
+                  <Button mnemonicParsing="false" onAction="#deleteUser" text="УДАЛИТЬ ПОЛЬЗОВАТЕЛЯ" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-width: 5; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="findUserUsername" alignment="CENTER" promptText="username" />
+                  <Button mnemonicParsing="false" onAction="#findUser" text="НАЙТИ ПОЛЬЗОВАТЕЛЯ" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-width: 5; -fx-border-color: black;">
+               <children>
+                  <TextField fx:id="changePasswordUsername" alignment="CENTER" promptText="username" />
+                  <PasswordField fx:id="changePasswordPassword" alignment="CENTER" promptText="new password" />
+                  <Button mnemonicParsing="false" onAction="#changePassword" text="ИЗМЕНИТЬ ПАРОЛЬ" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
